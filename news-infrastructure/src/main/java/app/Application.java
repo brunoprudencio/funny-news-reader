@@ -1,13 +1,13 @@
-package com.juvenalicos.funnynewsreader;
+package app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class FunnyNewsReaderApplication {
+public class Application {
 
 	public static void main(String[] args) {
-		SpringApplication.run(FunnyNewsReaderApplication.class, args);
+		SpringApplication.run( Application.class, args );
 	}
 
 }

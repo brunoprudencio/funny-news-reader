@@ -2,4 +2,7 @@ rootProject.name = 'funny-news-reader'
 include 'domain'
 include 'application'
 include 'infrastructure'
+include 'news-infrastructure'
+include 'news-application'
+include 'news-domain'
 
