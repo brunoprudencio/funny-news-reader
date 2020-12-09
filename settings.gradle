@@ -1,1 +1,5 @@
 rootProject.name = 'funny-news-reader'
+include 'domain'
+include 'application'
+include 'infrastructure'
+
