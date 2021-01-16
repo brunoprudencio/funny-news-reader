@@ -1,19 +1,15 @@
-package newsreader.core.domain.newscontent;
+package newsreader.domain.contentnews;
 
 import java.util.UUID;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-
+import lombok.AccessLevel;
 import lombok.Builder;
-import lombok.NoArgsConstructor;
+import lombok.Getter;
 
-@Entity
-@Builder
-@NoArgsConstructor
+@Getter
+@Builder(access = AccessLevel.PROTECTED)
 public class ContentNews {
 
-	@Id
 	private UUID id;
 	private String author;
 	private String content;
@@ -23,3 +19,4 @@ public class ContentNews {
 	private ContentProvider contentProvider;
 
 }
+
