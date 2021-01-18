@@ -1,5 +1,6 @@
 package newsreader.domain.contentnews;
 
+import java.time.LocalDate;
 import java.util.UUID;
 
 import lombok.AccessLevel;
@@ -13,10 +14,10 @@ public class ContentNews {
 	private UUID id;
 	private String author;
 	private String content;
-	private String contentTitle;
-	private String publishedYear;
 	private ContentCategory contentCategory;
 	private ContentProvider contentProvider;
+	private LocalDate publishedYear;
+	private String contentTitle;
 
 }
 

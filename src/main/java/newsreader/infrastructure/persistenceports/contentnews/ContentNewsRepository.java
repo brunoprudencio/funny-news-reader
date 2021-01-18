@@ -1,14 +1,13 @@
-package newsreader.infrasctructure.repositories.contentnews;
+package newsreader.infrastructure.persistenceports.contentnews;
 
-import java.util.List;
-import java.util.Optional;
+import java.util.Set;
 
 import newsreader.domain.contentnews.ContentCategory;
 import newsreader.domain.contentnews.ContentNews;
 
 public interface ContentNewsRepository {
 
-	Optional<List<ContentNews>> findByCategory(ContentCategory category);
+	Set<ContentNews> findByCategory(ContentCategory category);
 
 	void save(ContentNews content);
 }
