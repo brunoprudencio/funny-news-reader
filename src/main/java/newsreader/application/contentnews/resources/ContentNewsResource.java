@@ -2,15 +2,13 @@ package newsreader.application.contentnews.resources;
 
 import java.util.List;
 
-import javax.websocket.server.PathParam;
-
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import newsreader.application.contentnews.adapters.ListContentByCategoryAdapter;
-import newsreader.application.contentnews.adapters.utils.SortType;
-import newsreader.domain.contentnews.ContentCategory;
+import newsreader.application.contentnews.adapters.ListContentRequest;
 import newsreader.domain.contentnews.ContentNews;
 
 @RestController
@@ -23,11 +21,8 @@ public class ContentNewsResource {
 		this.listcontent = listcontent;
 	}
 
-	@GetMapping("listby/{category}/{sortType}")
-	public List<ContentNews> getContentByCategory(
-			@PathParam("category") ContentCategory category,
-			@PathParam("sortType") SortType sortType) {
-
-		return listcontent.execute( category, sortType );
+	@GetMapping("/list")
+	public List<ContentNews> getContentByCategory(@RequestBody ListContentRequest request) {
+		return listcontent.execute( request );
 	}
 }
